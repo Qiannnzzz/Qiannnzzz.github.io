@@ -150,12 +150,14 @@
   border-radius: 5 px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   word-wrap: break-word;
-  background-color: #ffffe9; /* 代码块背景色 */
+  background-color: #ffffe9;
+  margin-left: 10px;  /* 代码块背景色 */
 }
 
 
 .cuckoo pre {
   margin: 1.64em 0;
+  margin-left: 0px;
   padding: 8 px; /* Adjust padding inside the code block */
   overflow: auto;
   line-height: 1.6; /* Adjust line height of the code block */
@@ -166,21 +168,12 @@
   position: relative; /* Position the button relative to the code block */
 }
 
-
-.copy-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #007bff; /* 按钮背景色 */
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-}
-
-.copy-button:hover {
-  background-color: #0056b3; /* 鼠标悬停时的背景色 */
+.cuckoo pre code,
+.cuckoo pre tt {
+  display: block;
+  margin-left: 20px; /* 代码块左边距 */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
