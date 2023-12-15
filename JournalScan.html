@@ -1,450 +1,105 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>  
-	  
-  	JournalScan - Qiannnzzz
-  	
-	</title>
+    <title>
+         JournalScan - Qiannnzzz 
+    </title>
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="bioinformatics and machine learning source website">
 
-	<link href="atom.xml" rel="alternate" title="Qiannnzzz" type="application/atom+xml">
+    <link rel="stylesheet" type="text/css" href="asset/cuckoo.css">
+    <link rel="stylesheet" type="text/css" href="asset/main.css">
+    <link rel="stylesheet" type="text/css" href="asset/atom-one-light.css">
 
-	<link href="asset/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="asset/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<script src="asset/javascripts/jquery.min.js"></script>
-	
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Qiannnzzz">
 
-	<!--[if lt IE 9]><script src="asset/javascripts/html5.js"></script><![endif]-->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'> -->
-	<style type="text/css">
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Nunito-Light'), url(asset/font/1TiHc9yag0wq3lDO9cw0voX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Nunito-Regular'), url(asset/font/6TbRXKWJjpj6V2v_WyRbMX-_kf6ByYO6CLYdB4HQE-Y.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Nunito-Bold'), url(asset/font/TttUCfJ272GBgSKaOaD7KoX0hVgzZQUfRDuZrPvH3D8.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-	</style>
-	
-	<style type="text/css">
-	.container .left-col{ opacity: 1;}
-	#pagenavi a{ font-size: 1.3em;}
-	#pagenavi .next:before{ top: 3px;}
-	#pagenavi .prev:before{ top: 3px;}
-	.container .mid-col .mid-col-container #content .archives .title{ font-size: 1.5em;}
-	.container .mid-col .mid-col-container #content article{ padding: 15px 0px;}
-	#header .subtitle {
-		line-height: 1.2em;
-		padding-top: 8px;
-	}
-	article pre{ background: none; border: none; padding: 0;}
-	article .entry-content{text-align: left;}
-	.share-comment{ padding: 25px 0px; clear: both;}
-	hr{ margin: 20px 0px;border: 0; border-top:solid 1px #ddd;}
-	</style>
-  
-
+    <script src="asset/highlight.pack.js"></script>
+    <script src="asset/clipboard.min.js"></script>
+<!--    <script>hljs.initHighlightingOnLoad();</script>-->
 </head>
 
-
 <body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-				<header id="header" class="inner">
-				 
-				 	<div class="profilepic">
-						<img src="/Users/zhangqian/Desktop/zq/材料/个人简历/IMG_8416.jpg" style="width:160px;">
-					</div>
-            	
-					
-					<h1><a href="index.html">Qiannnzzz</a></h1>
-					<p class="subtitle">bioinformatics and machine learning source website</p>
-					<nav id="main-nav">
-						<ul class="main">
-						
-						  <li id=""><a target="_self" href="index.html">Home</a></li>
-						
-						  <li id=""><a target="_self" href="JournalRead.html">Topic</a></li>
-						
-						  <li id=""><a target="_self" href="Dataset.html">Dataset</a></li>
-						
-						  <li id=""><a target="_self" href="Softwares.html">Softwares</a></li>
-						
-						  <li id=""><a target="_self" href="Algorithms.html">Algorithms</a></li>
-						
-						  <li id=""><a target="_self" href="JournalScan.html">JournalScan</a></li>
-						
-						  <li id=""><a target="_self" href="Archives.html">Archives</a></li>
-						
-						</ul>
-					</nav>
+    <header class="site-header cuckoo">
+        <div class="wrapper">
+            <a class="site-title" href="index.html">Qiannnzzz</a>
+            <nav class="site-nav">
+                <a href="#" class="menu-icon">
+                    <svg viewBox="0 0 18 15">
+                        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+                        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+                        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+                    </svg>
+                </a>
+                <div class="trigger">
+                    
+                        <a class="page-link" href="index.html">Home</a>
+                    
+                        <a class="page-link" href="JournalRead.html">Topic</a>
+                    
+                        <a class="page-link" href="Dataset.html">Dataset</a>
+                    
+                        <a class="page-link" href="Softwares.html">Softwares</a>
+                    
+                        <a class="page-link" href="Algorithms.html">Algorithms</a>
+                    
+                        <a class="page-link" href="JournalScan.html">JournalScan</a>
+                    
+                        <a class="page-link" href="Archives.html">Archives</a>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+      <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 初始化 Clipboard.js
+      new ClipboardJS('.copy-button');
 
-					<nav id="sub-nav">
-						<div class="social">
+      // 添加复制按钮到每个代码块
+      document.querySelectorAll('.cuckoo pre').forEach(function (codeBlock) {
+        var copyButton = document.createElement('button');
+        copyButton.className = 'copy-button';
+        copyButton.setAttribute('data-clipboard-target', '#' + codeBlock.id);
+        copyButton.textContent = 'copy code';
+        codeBlock.appendChild(copyButton);
+      });
+    });
+  </script>
+</body>
 
-
-
-
-
-
-
-
-
-<a target="_blank" class="twitter" target="_blank" href="https://twitter.com/Qiannnzzz" title="Twitter">Twitter</a>
-<a target="_blank" class="github" target="_blank" href="https://github.com/Qiannnzzz" title="GitHub">GitHub</a>
-<a target="_blank" class="email" href="mailto:zhangqiannnn2000@gmail.com" title="Email">Email</a>
-
-								
-
-								<a class="rss" href="atom.xml" title="RSS">RSS</a>
-							
-						</div>
-					</nav>
-				</header>				
-			</div>
-		</div>	
-		<div class="mid-col">
-			<div class="mid-col-container"> <div id="content" class="inner">
-
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">JournalScan</h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>there are two ways for us to get new information<br />
+</html>
+ <div class="page-content cuckoo">
+    <div class="wrapper">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">JournalScan</h1>
+            </header>
+            <div class="post-content">
+                <p>there are two ways for us to get new information<br />
 one is read reference one by one<br />
 the other is scan the journal and quciky get the most information.</p>
 <p>Here, i will show the later type. list is following:<br />
 <a href="2023-11-1%20journal%20scan.html">2023-11 journal scan</a></p>
 
-	</div>
+            </div>
+        </article>
+    </div>
+</div>
 
-</article>
+<script src="asset/jquery-3.3.1.min.js"></script>
 
-</div>       </div>
-			<footer id="footer" class="inner">Copyright &copy; 2014
-Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a> &nbsp;&nbsp; 
-Theme by <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
-      </footer>
-		</div>
-	</div>
-
-
-
-  
-
-
-
-
+<script>
+    $(document).ready(function() {
+        $('#footer').show()
+    })
+</script>
+ <footer id="footer" class="cuckoo page-footer" style="display: none">
+    <div class="wrapper">
+        <p>Powered by MWeb Pro Cuckoo, Qian modified</a></p>
+    </div>
+</footer>
 
 
-
-
-
-
-
-
-
-
-<style type="text/css">
-figure{margin: 1em 0;padding: 0;}
-  figcaption{text-align:center;}
-
-/* PrismJS 1.14.0
-https://prismjs.com/download.html#themes=prism-coy&languages=markup+css+clike+javascript */
-/**
- * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
- * @author Tim  Shedor
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  background: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  position: relative;
-  margin: .5em 0;
-  overflow: visible;
-  padding: 0;
-}
-pre[class*="language-"]>code {
-  position: relative;
-  border-left: 10px solid #358ccb;
-  box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf;
-  background-color: #fdfdfd;
-  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-  background-size: 3em 3em;
-  background-origin: content-box;
-  background-attachment: local;
-}
-
-code[class*="language"] {
-  max-height: inherit;
-  height: inherit;
-  padding: 0 1em;
-  display: block;
-  overflow: auto;
-}
-
-/* Margin bottom to accomodate shadow */
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background-color: #fdfdfd;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 1em;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  position: relative;
-  padding: .2em;
-  border-radius: 0.3em;
-  color: #c92c2c;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  display: inline;
-  white-space: normal;
-}
-
-pre[class*="language-"]:before,
-pre[class*="language-"]:after {
-  content: '';
-  z-index: -2;
-  display: block;
-  position: absolute;
-  bottom: 0.75em;
-  left: 0.18em;
-  width: 40%;
-  height: 20%;
-  max-height: 13em;
-  box-shadow: 0px 13px 8px #979797;
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-}
-
-:not(pre) > code[class*="language-"]:after,
-pre[class*="language-"]:after {
-  right: 0.75em;
-  left: auto;
-  -webkit-transform: rotate(2deg);
-  -moz-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  -o-transform: rotate(2deg);
-  transform: rotate(2deg);
-}
-
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #7D8B99;
-}
-
-.token.punctuation {
-  color: #5F6364;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.function-name,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #c92c2c;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.function,
-.token.builtin,
-.token.inserted {
-  color: #2f9c0a;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.token.variable {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword,
-.token.class-name {
-  color: #1990b8;
-}
-
-.token.regex,
-.token.important {
-  color: #e90;
-}
-
-.language-css .token.string,
-.style .token.string {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.token.important {
-  font-weight: normal;
-}
-
-.token.bold {
-  font-weight: bold;
-}
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
-.namespace {
-  opacity: .7;
-}
-
-@media screen and (max-width: 767px) {
-  pre[class*="language-"]:before,
-  pre[class*="language-"]:after {
-    bottom: 14px;
-    box-shadow: none;
-  }
-
-}
-
-/* Plugin styles */
-.token.tab:not(:empty):before,
-.token.cr:before,
-.token.lf:before {
-  color: #e0d7d1;
-}
-
-/* Plugin styles: Line Numbers */
-pre[class*="language-"].line-numbers.line-numbers {
-  padding-left: 0;
-}
-
-pre[class*="language-"].line-numbers.line-numbers code {
-  padding-left: 3.8em;
-}
-
-pre[class*="language-"].line-numbers.line-numbers .line-numbers-rows {
-  left: 0;
-}
-
-/* Plugin styles: Line Highlight */
-pre[class*="language-"][data-line] {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-}
-pre[data-line] code {
-  position: relative;
-  padding-left: 4em;
-}
-pre .line-highlight {
-  margin-top: 0;
-}
-
-pre[class*="language-"].line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-}
-
-pre[class*="language-"].line-numbers > code {
-    position: relative;
-    white-space: inherit;
-}
-
-.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em; /* works for line-numbers below 1000 lines */
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-}
-
-    .line-numbers-rows > span {
-        pointer-events: none;
-        display: block;
-        counter-increment: linenumber;
-    }
-
-        .line-numbers-rows > span:before {
-            content: counter(linenumber);
-            color: #999;
-            display: block;
-            padding-right: 0.8em;
-            text-align: right;
-        }
-
-</style>
-  
-    
-
-
-</body>
-</html>

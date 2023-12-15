@@ -1,0 +1,240 @@
+.cuckoo {
+  font: 400 18px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #444443; /* 紫色主题文字颜色 */
+}
+
+.windows .cuckoo {
+  font-size: 16px;
+}
+
+.cuckoo ::selection {
+  color: white;
+  background-color: #6c3483; /* 紫色主题选中文本颜色 */
+}
+
+.cuckoo h1,
+.cuckoo h2,
+.cuckoo h3,
+.cuckoo h4,
+.cuckoo h5,
+.cuckoo h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+  color: #45227a; /* 紫色主题标题颜色 */
+}
+
+.cuckoo h1 {
+  font-size: 1.8em;
+  margin: 0.67em 0;
+}
+
+.cuckoo > h1 {
+  margin-top: 0;
+  font-size: 2em;
+}
+
+.cuckoo p {
+  margin-top: 0;
+  margin-bottom: 1.24em;
+}
+
+.cuckoo a {
+  color: #1a237e; /* 紫色主题链接颜色 */
+  word-wrap: break-word;
+  -webkit-text-decoration-color: #311b92; /* 紫色主题链接下划线颜色 */
+  text-decoration-color: #311b92;
+}
+
+.cuckoo a:hover {
+  color: #311b92; /* 紫色主题链接悬停颜色 */
+  -webkit-text-decoration-color: #4527a0; /* 紫色主题链接悬停下划线颜色 */
+  text-decoration-color: #4527a0;
+}
+
+.cuckoo strong,
+.cuckoo b {
+  font-weight: 700;
+  color: #45227a; /* 紫色主题加粗文字颜色 */
+}
+
+.cuckoo em,
+.cuckoo i {
+  font-style: italic;
+  color: #45227a; /* 紫色主题斜体文字颜色 */
+}
+
+.cuckoo img {
+  display: block;
+  max-width: 100%;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cuckoo figure img {
+  display: block;
+  max-width: 100%;
+  margin: auto auto 4px;
+  box-sizing: border-box;
+}
+
+.cuckoo hr {
+  display: block;
+  width: 14%;
+  margin: 40px auto 34px;
+  border: 0 none;
+  border-top: 3px solid #45227a; /* 紫色主题水平线颜色 */
+}
+
+.cuckoo blockquote {
+  margin: 0 0 1.64em 0;
+  border-left: 3px solid #45227a; /* 紫色主题引用块左边框颜色 */
+  padding-left: 12px;
+  color: #45227a; /* 紫色主题引用块文字颜色 */
+}
+
+.cuckoo blockquote a {
+  color: #45227a; /* 紫色主题引用块链接颜色 */
+}
+
+.cuckoo ul,
+.cuckoo ol {
+  margin: 0 0 24px 6px;
+  padding-left: 16px;
+}
+
+.cuckoo ul {
+  list-style-type: disc;
+}
+
+.cuckoo ol {
+  list-style-type: decimal;
+}
+
+.cuckoo li {
+  margin-bottom: 0.2em;
+}
+
+.cuckoo li ul,
+.cuckoo li ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 14px;
+}
+
+.cuckoo li ul {
+  list-style-type: disc;
+}
+
+.cuckoo li ul ul {
+  list-style-type: circle;
+}
+
+.cuckoo li p {
+  margin: 0.4em 0 0.6em;
+}
+
+.cuckoo .unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Code Block Styles */
+
+.cuckoo code,
+.cuckoo tt {
+  color: #000000; /* 代码文字颜色 */
+  font-size: 0.9em;
+  padding: 8 px; /* 调整代码块内边距 */
+  border: 10 px solid #45227a; /* 代码块边框颜色 */
+  border-radius: 5 px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  word-wrap: break-word;
+  background-color: #ffffe9; /* 代码块背景色 */
+}
+
+
+.cuckoo pre {
+  margin: 1.64em 0;
+  padding: 8 px; /* Adjust padding inside the code block */
+  overflow: auto;
+  line-height: 1.6; /* Adjust line height of the code block */
+  font-size: 0.9em;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  color: #4c4c4c; /* Code text color */
+  background-color: #ffffe9; /* Code block background color */
+  position: relative; /* Position the button relative to the code block */
+}
+
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff; /* 按钮背景色 */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.copy-button:hover {
+  background-color: #0056b3; /* 鼠标悬停时的背景色 */
+}
+
+
+.cuckoo table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.5em;
+  font-size: 0.96em;
+  box-sizing: border-box;
+}
+
+.cuckoo th,
+.cuckoo td {
+  text-align: left;
+  padding: 4px 8px 4px 10px;
+  border: 1px solid #45227a; /* 紫色主题表格边框颜色 */
+}
+
+.cuckoo td {
+  vertical-align: top;
+}
+
+.cuckoo tr:nth-child(even) {
+  background-color: #efefee;
+}
+
+.cuckoo iframe {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.cuckoo figure iframe {
+  margin: auto;
+}
+
+.cuckoo table pre {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+@media (min-width: 1100px) {
+  .cuckoo blockquote {
+    margin-left: -24px;
+    padding-left: 20px;
+    border-width: 4px;
+  }
+
+  .cuckoo blockquote blockquote {
+    margin-left: 0;
+  }
+}
+

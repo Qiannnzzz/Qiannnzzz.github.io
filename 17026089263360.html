@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+         2022年09月生信分析日志-张倩 - Qiannnzzz 
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="bioinformatics and machine learning source website">
+
+    <link rel="stylesheet" type="text/css" href="asset/cuckoo.css">
+    <link rel="stylesheet" type="text/css" href="asset/main.css">
+    <link rel="stylesheet" type="text/css" href="asset/atom-one-light.css">
+
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Qiannnzzz">
+
+    <script src="asset/highlight.pack.js"></script>
+    <script src="asset/clipboard.min.js"></script>
+<!--    <script>hljs.initHighlightingOnLoad();</script>-->
+</head>
+
+<body>
+    <header class="site-header cuckoo">
+        <div class="wrapper">
+            <a class="site-title" href="index.html">Qiannnzzz</a>
+            <nav class="site-nav">
+                <a href="#" class="menu-icon">
+                    <svg viewBox="0 0 18 15">
+                        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+                        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+                        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+                    </svg>
+                </a>
+                <div class="trigger">
+                    
+                        <a class="page-link" href="index.html">Home</a>
+                    
+                        <a class="page-link" href="JournalRead.html">Topic</a>
+                    
+                        <a class="page-link" href="Dataset.html">Dataset</a>
+                    
+                        <a class="page-link" href="Softwares.html">Softwares</a>
+                    
+                        <a class="page-link" href="Algorithms.html">Algorithms</a>
+                    
+                        <a class="page-link" href="JournalScan.html">JournalScan</a>
+                    
+                        <a class="page-link" href="Archives.html">Archives</a>
+                    
+                </div>
+            </nav>
+        </div>
+    </header>
+      <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // 初始化 Clipboard.js
+      new ClipboardJS('.copy-button');
+
+      // 添加复制按钮到每个代码块
+      document.querySelectorAll('.cuckoo pre').forEach(function (codeBlock) {
+        var copyButton = document.createElement('button');
+        copyButton.className = 'copy-button';
+        copyButton.setAttribute('data-clipboard-target', '#' + codeBlock.id);
+        copyButton.textContent = 'copy code';
+        codeBlock.appendChild(copyButton);
+      });
+    });
+  </script>
+</body>
+
+</html>
+ <div class="page-content cuckoo">
+    <div class="wrapper">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">2022年09月生信分析日志-张倩</h1>
+            </header>
+            <div class="post-content">
+                <div class="mweb_toc"><ul>
+<li><a href="#1-1%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84">1.1 分析目的</a></li>
+<li><a href="#1-2%E5%88%86%E6%9E%90%E6%A0%B7%E6%9C%AC%E5%8F%8A%E7%8E%AF%E5%A2%83">1.2 分析样本及环境</a></li>
+<li><a href="#1-3%E5%88%86%E6%9E%90%E6%80%9D%E8%B7%AF">1.3 分析思路</a></li>
+<li><a href="#1-4%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C">1.4 分析结果</a></li>
+<li><a href="#1-5%E5%88%86%E6%9E%90%E4%BB%A3%E7%A0%81%E5%8F%8A%E6%B3%A8%E9%87%8A">1.5 分析代码及注释</a></li>
+</ul>
+</div>
+<p>##4 本月任务 1 JEV 项目差异基因分析</p>
+<h3><a id="1-1%E5%88%86%E6%9E%90%E7%9B%AE%E7%9A%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.1 分析目的</h3>
+<p>有些黄病毒经过蚊虫叮咬传播，威胁公共卫生安全，但是黄病毒感染的机制尚不清楚。本项目旨在通过时空组学技术Stereo-seq，阐明病毒主要感染的细胞类型和潜在机制，为日本脑炎病毒防治提供新思路。</p>
+<h3><a id="1-2%E5%88%86%E6%9E%90%E6%A0%B7%E6%9C%AC%E5%8F%8A%E7%8E%AF%E5%A2%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.2 分析样本及环境</h3>
+<p>病毒感染样本 THU50 THU52 THU54 THU66 THU68<br />
+language: R(4.2.1)<br />
+package: Seurat(4.1.1) dplyr(1.0.10) ggplot2(3.3.6) patchwork(1.1.1)</p>
+<h3><a id="1-3%E5%88%86%E6%9E%90%E6%80%9D%E8%B7%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.3 分析思路</h3>
+<p>根据median gene per spot 确定bin35为binsize方法分析的基本单元，本差异分析全部采用的是bin35的数据。<br />
+首先病毒感染的cluster会有NS5和NS3基因的存在，通过病毒基因表达量每张芯片中病毒感染的cluster,将病毒感染的cluster取子集，生成rds。<br />
+病毒基因有：NS5, NS3, NS2b, NS4bAlt, ancC, E, preM, NS2a, NS4aAlt, NS1,将病毒基因表达量加和，取上下四分位，大于上四分位为高度感染组，代号“1”，小于小四分位为低度感染组，代号“0”。<br />
+根据FindAllMarkers默认参数，找差异基因，绘制堆叠小提琴图。</p>
+<h3><a id="1-4%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.4 分析结果</h3>
+<p>样本1 THU50 total 1212 spot, sum_high = 15.20, sum_low = 8.25, high group 303, low group 301;<br />
+样本2 THU52 total 517 spot, sum_high = 9.58, sum_low = 5.26, high group 129, low group 129<br />
+样本3 THU66 total 4764 spot, sum_high = 6.58, sum_low = 2.64, high group 1179, low group 1170;<br />
+样本4 THU66 total 6842 spot, sum_high = 1.95, sum_low = 0.69, high group 1654, low group 941;<br />
+p.s.：THU54样本只有 23 个spot, 认为不可以纳入分析，会增加偶然性。<br />
+结果显示，4张芯片中<strong>Ccl5</strong>均为差异基因，3张芯片，感染组相对上调，1张芯片，正常组上调。<br />
+<figure><img src="media/16644552750011/16644553187268.jpg" alt="" /></figure></p>
+<h3><a id="1-5%E5%88%86%E6%9E%90%E4%BB%A3%E7%A0%81%E5%8F%8A%E6%B3%A8%E9%87%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1.5 分析代码及注释</h3>
+<p>确定病毒感染的cluster 主要是vlnplot</p>
+<pre class="line-numbers"><code class="language-R">.libPaths(&quot;/lib&quot;)
+setwd(&quot;/zhangqian&quot;)
+library(Seurat)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+brain &lt;-readRDS(&quot;/stereo.seurat.rds&quot;)
+sample &lt;- &quot;THU50_bin35_V5&quot;
+Idents(brain) &lt;- &quot;leiden&quot;
+levels(brain)
+pdf(file=paste0(sample,&quot;_NS5_NS3_vlnplot.pdf&quot;))
+#brainsubset&lt;-subset(brain,ident=c(25,30,35))
+#saveRDS(brainsubset,&quot;brainsubset25_30_35.rds&quot;)
+feature1 &lt;- c('NS5','NS3')
+p&lt;-VlnPlot(brain, features= feature1, stack = TRUE, flip = T, fill.by='ident')
+p
+dev.off()
+</code></pre>
+<p>将病毒感染的cluster提取出来生成新的子集</p>
+<pre class="line-numbers"><code class="language-R">.libPaths(&quot;/lib&quot;)
+setwd(&quot;/zhangqian&quot;)
+library(Seurat)
+brain &lt;-readRDS(&quot;stereo.seurat.rds&quot;)
+Idents(brain) &lt;- &quot;leiden&quot;
+levels(brain)
+brainsubset&lt;-subset(brain,idents=c(&quot;1&quot;))
+</code></pre>
+<p>将新的子集用于差异基因分析</p>
+<pre class="line-numbers"><code class="language-R">setwd(&quot;zhangqian/sample&quot;)
+library(Seurat)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+obj &lt;- readRDS(&quot;sample.rds&quot;)
+levels(obj)
+sam &lt;- &quot;sampleid_clusterid_&quot;
+DefaultAssay(obj) &lt;- &quot;SCT&quot;
+#Idents(obj) &lt;- &quot;orig.ident&quot;
+#Idents(obj) &lt;- &quot;leiden&quot;
+obj30 &lt;- subset(obj, idents = c(&quot;25&quot;))
+
+#病毒基因&quot;NS5&quot;,&quot;NS3&quot;,&quot;NS1&quot;,&quot;preM&quot;,&quot;E&quot;,&quot;NS2a&quot;,&quot;NS2b&quot;,&quot;NS4aAlt&quot;,&quot;NS4bAlt&quot;
+NS5matrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS5&quot;,])
+colnames(NS5matrix) &lt;- &quot;NS5&quot;
+obj30[[&quot;NS5&quot;]] &lt;- NS5matrix
+NS1matrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS1&quot;,])
+colnames(NS1matrix) &lt;- &quot;NS1&quot;
+obj30[[&quot;NS1&quot;]] &lt;- NS1matrix
+NS3matrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS3&quot;,])
+colnames(NS3matrix) &lt;- &quot;NS3&quot;
+obj30[[&quot;NS3&quot;]] &lt;- NS3matrix
+preMmatrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;preM&quot;,])
+colnames(preMmatrix) &lt;- &quot;preM&quot;
+obj30[[&quot;preM&quot;]] &lt;- preMmatrix
+Ematrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;E&quot;,])
+colnames(Ematrix) &lt;- &quot;E&quot;
+obj30[[&quot;E&quot;]] &lt;- Ematrix
+NS2bmatrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS2b&quot;,])
+colnames(NS2bmatrix) &lt;- &quot;NS2b&quot;
+obj30[[&quot;NS2b&quot;]] &lt;- NS2bmatrix
+NS4aAltmatrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS4aAlt&quot;,])
+colnames(NS4aAltmatrix) &lt;- &quot;NS4aAlt&quot;
+obj30[[&quot;NS4aAlt&quot;]] &lt;- NS4aAltmatrix
+NS4bAltmatrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;NS4bAlt&quot;,])
+colnames(NS4bAltmatrix) &lt;- &quot;NS4bAlt&quot;
+obj30[[&quot;NS4bAlt&quot;]] &lt;- NS4bAltmatrix
+ancCmatrix &lt;- as.matrix(obj30@assays$SCT@data[&quot;ancC&quot;,])
+colnames(ancCmatrix) &lt;- &quot;ancC&quot;
+obj30[[&quot;ancC&quot;]] &lt;- ancCmatrix
+
+#计算病毒所有基因的表达总和
+obj_trial &lt;-obj30
+obj_trial[[&quot;sum&quot;]] &lt;- rowSums(obj_trial@meta.data[,c(13,14,15,16,17,18,19,20,21)])
+
+#obj_virus &lt;- subset(obj_trial, sum &gt; 0 )
+#median_sum &lt;- median(obj_virus@meta.data$sum)
+#obj_virus &lt;- subset(obj_trial, sum &gt; median_sum)
+#obj_normal &lt;- subset(obj_trial, sum&lt;= median_sum)
+
+sum_high &lt;- quantile(obj_trial$sum,.75)[[1]]
+sum_low &lt;- quantile(obj_trial$sum,.25)[[1]]
+obj_high &lt;- subset(obj_virus, sum &gt; sum_high )
+obj_low &lt;- subset(obj_virus, sum &lt; sum_low )
+
+#obj_NS5_final &lt;- subset(obj_virus, subset = sum &gt; NS5_low)
+#obj_NS5_median &lt;- subset(obj_virus, subset = sum &lt;= NS5_low)
+
+pdf(file=paste0(sam,&quot;_overview_vlnplot.pdf&quot;))
+obj_NS5_vln &lt;- VlnPlot(obj_trial, features = c('nCount_Spatial','nFeature_Spatial', 'sum'), pt.size = .1)
+obj_NS5_final_vln &lt;- VlnPlot(obj_high, features = c('nCount_Spatial','nFeature_Spatial', 'sum'), pt.size = .1)
+obj_NS5_median_vln &lt;- VlnPlot(obj_low, features = c('nCount_Spatial','nFeature_Spatial', 'sum'), pt.size = .1)
+obj_NS5_vln
+obj_NS5_final_vln
+obj_NS5_median_vln
+dev.off()
+
+#分组结束将metadata中病毒基因表达值移除，因为列名是病毒基因名，会导致findallmarkers报错
+obj_high@meta.data&lt;- obj_high@meta.data[,1:12]
+obj_low@meta.data&lt;- obj_low@meta.data[,1:12]
+
+#将高低表达组分别给予不同的label
+obj_high[[&quot;virus_express&quot;]] &lt;- &quot;1&quot;
+obj_low[[&quot;virus_express&quot;]] &lt;- &quot;0&quot;
+
+
+#obj_NS5_median [[&quot;virus_express&quot;]] &lt;- &quot;0.5&quot;
+#obj_virus[[&quot;virus_express&quot;]] &lt;- &quot;1&quot;
+#final &lt;- as.matrix(obj_NS5_final$NS5_express)
+#normal &lt;- as.matrix(obj_normal$NS5_express)
+#median &lt;- as.matrix(obj_NS5_median$NS5_express)
+#finall &lt;- rbind(median,rbind(final,normal))
+#obj30[[&quot;NS5_express&quot;]] &lt;- finall
+#obj30@meta.data &lt;- merge(obj30@meta.data, finall)
+#finall &lt;- as.data.frame(finall)
+#finall[&quot;cell&quot;] &lt;- rownames(finall)
+#finall &lt;- finall[order(finall[,2]),]
+#obj30@meta.data[&quot;location&quot;] &lt;- rownames(obj30@meta.data)
+#obj30@meta.data &lt;- obj30@meta.data[order(obj30@meta.data[,14]),]
+#obj30@meta.data &lt;- cbind(obj30@meta.data[,1:13],finall)
+#obj_all &lt;- merge(x=obj_normal,y=c(obj_NS5_final,obj_NS5_median))
+
+将病毒表达高低组merge成为一个新的Seurat对象
+obj_all&lt;-merge(x=obj_high,y=obj_low)
+obj1&lt;- obj_all
+dim(obj30)
+dim(obj_high)
+dim(obj_virus)
+dim(obj_low)
+dim(obj1)
+Idents(obj1) &lt;- &quot;virus_express&quot;
+
+#markers0 &lt;- FindMarkers(obj30, ident.1 = 0, ident.2 = 1 , min.pct = 0.1 )
+#markers1 &lt;- FindMarkers(obj_all, ident.1 = 1, ident.2 = 0 , min.pct = 0.01  )
+#allmarkers &lt;- FindAllMarkers(obj_all, only.pos = TRUE, min.pct = 0.1, logfc.threshold = 0.1)
+#p &lt;- FeaturePlot(obj30, features = c(&quot;NS5&quot;,&quot;Apod&quot;),slot = &quot;data&quot;)
+#data &lt;- as.data.frame(obj_normal@assays$SCT@counts)
+#plot1&lt;-VlnPlot(obj_all, features= c('NS5','NS3',&quot;Apod&quot;), stack = TRUE, flip = T, fill.by='ident',slot = &quot;data&quot;)
+#pp &lt;- DimPlot(obj30, reduction = &quot;umap&quot;, pt.size = 0.5)
+#NS5_normal_variables &lt;- FindVariableFeatures(pbmc, selection.method = &quot;vst&quot;, nfeatures = 2000)
+#plot1 &lt;- VlnPlot(obj_all, features= c('anCC','NS3',&quot;E&quot;,&quot;NS1&quot;,&quot;NS5&quot;,&quot;Apod&quot;,&quot;Rps23&quot;,&quot;mt-Cytb&quot;), stack = TRUE, flip = T, fill.by='ident',slot = &quot;data&quot;)
+#obj1 &lt;- subset(obj_all, idents = c(&quot;0&quot;,&quot;1&quot;))
+#obj1@meta.data &lt;- obj1@meta.data[,1:12]
+
+#找高低组的差异基因 default parameter
+allmarkers &lt;- FindAllMarkers(obj1, only.pos = T)
+
+#marker0 &lt;- filter(allmarkers, allmarkers$cluster =='0')
+#marker0 &lt;- marker0[order(marker0[,2],decreasing = T),]
+#marker0 &lt;- marker0[1:20,]
+#marker1 &lt;- filter(allmarkers, allmarkers$cluster =='1')
+#marker1 &lt;- marker1[order(marker1[,2],decreasing = T),]
+#marker1 &lt;- marker1[1:20,]
+##allmarkers1 &lt;- FindAllMarkers(obj1, only.pos = F, min.pct = 0.05, logfc.threshold = 0.05)
+##saveRDS(allmarkers1,paste0(sam,&quot;_allmarkers_only_posF.rds&quot;))
+#plot1 &lt;- VlnPlot(obj1, features= marker0$gene, fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+#plot2 &lt;- VlnPlot(obj1, features= marker1$gene[1:37], fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+#plot3 &lt;- VlnPlot(obj1, features= marker1$gene[38:75], fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T,)
+#plot4 &lt;- VlnPlot(obj1, features= c(&quot;NS5&quot;,&quot;NS3&quot;), fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+#pdf(file = paste0(sam,&quot;_Singlet_clusters.pdf&quot;))
+#c('Ccl2','Ccl3','Cxcl3','Cxcl2','Cxcl1','Mx1',&quot;MX2&quot;,&quot;Ifnar1&quot;,&quot;Ifnar2&quot;,&quot;Ifnb1&quot;,&quot;Ifnc&quot;,&quot;Ifitm1&quot;,&quot;Ifitm2&quot;,'Ifitm3','Ifitm5','Il1rn',&quot;Il1r2&quot;,&quot;Il1b&quot;,&quot;Il6&quot;,&quot;Il2&quot;)
+#obj_new &lt;- obj_normal
+#obj_new$summ &lt;- obj_normal@assays$SCT@data
+#library(hflights)
+#aaa&lt;-qqnorm(obj_trial$sum,ylab=&quot;sum&quot;)
+#aaa&lt;-qqline(obj_trial$sum)
+</code></pre>
+<p>绘制差异基因堆叠提琴图</p>
+<pre class="line-numbers"><code class="language-R">sam &lt;-
+pdf(file=paste0(sam,&quot;_Singlegene_vlnplot.pdf&quot;))
+plot1&lt;-VlnPlot(obj1, features= allmarkers$gene, fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+#plot2&lt;-VlnPlot(obj1, features= allmarkers$gene[31:54], fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+#plot3&lt;-VlnPlot(obj1, features= marker1$gene[31:60], fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T,)
+#plot4&lt;-VlnPlot(obj1, features= c(&quot;Tspo&quot;), fill.by='ident',slot = &quot;data&quot;, stack = TRUE, flip = T)
+plot1
+#plot2
+dev.off()
+</code></pre>
+
+            </div>
+        </article>
+    </div>
+</div>
+
+<script src="asset/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#footer').show()
+    })
+</script>
+ <footer id="footer" class="cuckoo page-footer" style="display: none">
+    <div class="wrapper">
+        <p>Powered by MWeb Pro Cuckoo, Qian modified</a></p>
+    </div>
+</footer>
+
+
